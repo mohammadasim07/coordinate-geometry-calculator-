@@ -24,17 +24,10 @@ class Point:
     def reflection_across_y_axis(self):
         return (-self.x_cod,self.y_cod)
     
-    def translation_of_a_point():
-
-    def rotation_of_a_point():
+    def slope(self,other):
+        if other.x_cod - self.x_cod == 0:
+            return "The slope is undefined (vertical line)."
+        else:
+            return (other.y_cod - self.y_cod)/(other.x_cod - self.x_cod)
        
     
-p1 = Point(4,5)
-p2 = Point(4,4)
-
-eq = p1.euclidean_distance(p2)
-d = p1.distance_from_origin()
-
-l = p1.reflection_across_x_axis()
-
-print(l)
