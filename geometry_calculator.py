@@ -31,3 +31,22 @@ class Point:
             return (other.y_cod - self.y_cod)/(other.x_cod - self.x_cod)
        
     
+class Line:
+
+    def __init__(self,A,B,C):
+        self.A = A
+        self.B = B
+        self.C = C
+
+    def __str__(self):
+        return ' {}x + {}y + {} = 0 '.format(self.A,self.B,self.C)
+
+    def distance_to_point(self, point):
+        numerator = abs(self.A * point.x_cod + self.B * point.y_cod + self.C)
+        denominator = (self.A**2 + self.B**2)**0.5
+        
+        if denominator == 0:
+            return 0
+            
+        return numerator / denominator
+ 
